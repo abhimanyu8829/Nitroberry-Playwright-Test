@@ -1,6 +1,6 @@
-# Playwright Login Automation
+# Nitroberry Login Automation
 
-This project is a dedicated test suite for automating login processes using the **Playwright** framework. It provides a robust foundation for testing authentication flows, ensuring that login mechanisms work correctly and efficiently.
+This project is a dedicated test suite for automating and validating the login processes for **Nitroberry** using the **Playwright** framework. It ensures that authentication flows are secure, reliable, and provide correct feedback to users.
 
 ## 🚀 Getting Started
 
@@ -14,60 +14,65 @@ Before you begin, ensure you have the following installed on your machine:
 - **npm**: Usually comes bundled with Node.js.
 
 ### 🛠️ Installation & Setup
+
+1. **Clone the Repository**
+   ```bash
+   git clone <repository-url>
+   cd "playwright-login"
    ```
 
 2. **Install Dependencies**
-   Install the required Node.js modules (including Playwright):
+   Install the required Node.js modules:
    ```bash
    npm install
    ```
 
 3. **Install Playwright Browsers**
-   Playwright requires specific browser binaries (Chromium, Firefox, WebKit) to run tests. Install them using:
+   Playwright requires specific browser binaries (Chromium, Firefox, WebKit):
    ```bash
    npx playwright install
    ```
 
 ## 🧪 Running the Tests
 
-You can execute the tests in different modes depending on your needs.
+You can execute the entire suite or specific tests using the following commands.
 
-### Run tests in Headless Mode (Default)
-Standard execution without opening a browser window:
+### Run All Tests (Headless)
+Runs all tests in the background (no browser window):
 ```bash
 npx playwright test
 ```
 
-### Run tests in Headed Mode
-Opens a browser window so you can see the automation in action:
+### Run All Tests (Headed)
+Opens the browser so you can watch the automation:
 ```bash
 npx playwright test --headed
 ```
 
 ### Run a Specific Test File
-If you want to run only the login test:
+Example: Run only the positive login test:
 ```bash
-npx playwright test tests/login.test.js
+npx playwright test tests/login-positive.spec.js
 ```
 
 ### Generate and View Test Report
-After running the tests, you can view a detailed HTML report:
+After running tests, view a detailed interactive report:
 ```bash
 npx playwright show-report
 ```
 
-## 📂 Project Structure
+## 📂 Test Suite Structure
 
-- **`tests/`**: Contains the test specifications (e.g., `login.test.js`).
-- **`auth.json`**: (Optional) Stores authentication state like cookies and local storage to skip login steps in future tests.
-- **`package.json`**: Defines project dependencies and scripts.
-- **`test-results/`**: Automatically generated directory containing artifacts from test runs (screenshots, videos, etc. if enabled).
+The test suite is organized into logical files covering different login scenarios:
+
+- **`tests/login-positive.spec.js`**: Validates successful login with correct credentials and verifies dashboard access.
+- **`tests/login-negative.spec.js`**: Ensures the system correctly handles invalid credentials and prevents unauthorized access.
+- **`tests/login-validation.spec.js`**: Tests form input validations, such as empty fields and missing passwords.
 
 ## 🛠️ Built With
 
-* [Playwright](https://playwright.dev/) - Modern end-to-end testing framework.
+* [Playwright](https://playwright.dev/) - Reliable end-to-end testing for modern web apps.
 * [Node.js](https://nodejs.org/) - JavaScript runtime.
 
 ---
 *Developed for automated testing excellence.*
-# playwright-sample-test
