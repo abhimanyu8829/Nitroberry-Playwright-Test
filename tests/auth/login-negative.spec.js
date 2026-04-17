@@ -9,5 +9,12 @@ test('Nitroberry Login - Invalid Credentials', async ({ page }) => {
 
     await page.getByRole('button', { name: 'Sign in' }).click();
 
+    // ✅ Wait for navigation attempt
+    await page.waitForLoadState('networkidle');
+
+    // ✅ Assert still on login page
     await expect(page).toHaveURL(/login/);
+
+    // ✅ Optional: check login form still visible
+    await expect(page.locator('#email')).toBeVisible();
 });

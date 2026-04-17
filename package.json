@@ -1,7 +1,7 @@
 {
   "name": "playwright-login",
   "version": "1.0.0",
-  "description": "",
+  "description": "This project is a dedicated test suite for automating and validating the login processes for **Nitroberry** using the **Playwright** framework. It ensures that authentication flows are secure, reliable, and provide correct feedback to users.",
   "main": "index.js",
   "scripts": {
     "test": "playwright test",
@@ -12,5 +12,16 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.59.1"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhimanyu8829/Nitroberry-Playwright-Test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/abhimanyu8829/Nitroberry-Playwright-Test/issues"
+  },
+  "homepage": "https://github.com/abhimanyu8829/Nitroberry-Playwright-Test#readme"
 }

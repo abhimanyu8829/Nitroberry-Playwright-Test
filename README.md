@@ -52,7 +52,7 @@ npx playwright test --headed
 ### Run a Specific Test File
 Example: Run only the positive login test:
 ```bash
-npx playwright test tests/login-positive.spec.js
+npx playwright test tests/auth/login-positive.spec.js
 ```
 
 ### Generate and View Test Report
@@ -63,11 +63,24 @@ npx playwright show-report
 
 ## 📂 Test Suite Structure
 
-The test suite is organized into logical files covering different login scenarios:
+The test suite is organized into logical directories covering different areas of the application:
 
-- **`tests/login-positive.spec.js`**: Validates successful login with correct credentials and verifies dashboard access.
-- **`tests/login-negative.spec.js`**: Ensures the system correctly handles invalid credentials and prevents unauthorized access.
-- **`tests/login-validation.spec.js`**: Tests form input validations, such as empty fields and missing passwords.
+### 🔐 Auth Tests
+- **`tests/auth/login-positive.spec.js`**: Validates successful login with correct credentials and verifies dashboard access.
+- **`tests/auth/login-negative.spec.js`**: Ensures the system correctly handles invalid credentials and prevents unauthorized access.
+- **`tests/auth/login-validation.spec.js`**: Tests form input validations, such as empty fields and missing passwords.
+
+### 👤 User Tests
+- **`tests/user/user-create-positive.spec.js`**: Validates the successful creation of new users.
+- **`tests/user/user-create-negative.spec.js`**: Ensures the system correctly handles errors during user creation.
+- **`tests/user/user-validation.spec.js`**: Tests form input validations for user creation.
+
+### ⚙️ Setup Tests
+- **`tests/setup/company-settings.spec.js`**: Validates updating company profile and website settings.
+- **`tests/setup/department-create.spec.js`**: Ensures new departments can be added and verified in the system.
+- **`tests/setup/job-title-create.spec.js`**: Validates the creation of new job titles.
+- **`tests/setup/holiday-create.spec.js`**: Tests the addition and validation of company holidays.
+
 
 ## 🛠️ Built With
 
