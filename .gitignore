@@ -1,2 +1,6 @@
 node_modules/
-
+last-run.json
+auth.json
+debug.png
+error-context.md
+.last-run.json
