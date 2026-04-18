@@ -4,3 +4,5 @@ auth.json
 debug.png
 error-context.md
 .last-run.json
+pending task.txt
+.gitignore
