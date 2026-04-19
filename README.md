@@ -82,6 +82,14 @@ The test suite is organized into logical directories covering different areas of
 - **`tests/setup/department-create.spec.js`**: Ensures new departments can be added and correctly displayed in the system.
 - **`tests/setup/job-title-create.spec.js`**: Validates the creation and verification of new job titles using API response monitoring.
 - **`tests/setup/holiday-create.spec.js`**: Tests the addition and validation of company holidays with backend-compatible date handling.
+- **`tests/setup/create-role.spec.js`**: Validates the creation of user roles with specific permissions and access levels.
+- **`tests/setup/create-shift.spec.js`**: Tests the creation and management of employee shifts, including timing and rotation.
+- **`tests/setup/create-ticket.spec.js`**: Ensures support or operational tickets can be created, assigned, and tracked.
+- **`tests/setup/group-create.spec.js`**: Validates the creation of user groups for organizational management and bulk assignments.
+- **`tests/setup/workflow-template-create.spec.js`**: Tests the setup of automated workflow templates for business processes.
+
+### 📋 Task Tests
+- **`tests/task/create-task.spec.js`**: Validates the full task creation lifecycle, including title, description, priority, end dates, and user assignment.
 
 
 
